@@ -1,11 +1,8 @@
 public class EmpWageBuilder{
 	public static final int is_Part_Time=1;
 	public static final int is_Full_Time=2;
-	public static final int emp_Rate_Per_Hrs=20;
-	public static final int num_Of_Working_Days=20;
-	public static final int max_Hrs_In_Month=100;
 	
-	public static void calculateEmpWage()
+	public static void calculateEmpWage(String companyname,int emp_Rate_Per_Hrs,int num_Of_Working_Days,int max_Hrs_In_Month)
 	{
 		
 		int empHrs=0,totalEmpHrs=0,totalWorkingDays=0,totalEmpWage=0;
@@ -32,10 +29,14 @@ public class EmpWageBuilder{
 			
 		}
 		totalEmpWage=totalEmpHrs*emp_Rate_Per_Hrs;
-		System.out.println("Total EmpWage = " +totalEmpWage);
+		System.out.println("Total EmpWage for "+ companyname + " =" +totalEmpWage);
 		
 	}
 	
 	public static void main(String[] args)
 	{
-		
+		calculateEmpWage("Bridgelabz",10,2,10);
+		 calculateEmpWage("BigBazar",15,4,15);
+
+	}
+}
